@@ -1,0 +1,8 @@
+keycode 101 = Control_R
+keycode 102 = space
+keycode 100 = BackSpace
+keycode 66  = Control_L
+keycode 104 = Num_Lock
+keycode 108 = colon asterisk
+keycode 105 = backslash underscore
+keycode 49  = Zenkaku_Hankaku

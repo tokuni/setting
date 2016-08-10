@@ -31,7 +31,12 @@ alias free='free -m'                      # show sizes in MB
 alias np='nano PKGBUILD'
 alias la='ls -a'
 alias ll='ls -al'
+
+#git 関連
 alias commit='git commit -m'
+alias add='git add'
+alias push='git push'
+
 
 # ex - archive extractor
 # usage: ex <file>
