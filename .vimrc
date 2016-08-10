@@ -61,12 +61,12 @@ if dein#load_state(s:dein_dir)
 
 
 	call dein#add('Shougo/dein.vim')
-	call dein#add('Shougo/unite.vim')
-	call dein#add('Shougo/neocomplcache.vim')
-	call dein#add('slimv.vim')
+	call dein#add('Shougo/unite.vim')"補完関連
+	call dein#add('Shougo/neocomplcache.vim')"補完関連
+	call dein#add('slimv.vim')"Lisp
 	call dein#add('https://github.com/vim-latex/vim-latex')
 	call dein#add('Shougo/neomru.vim')
-	call dein#add('kien/rainbow_parentheses.vim')
+	call dein#add('kien/rainbow_parentheses.vim')"括弧に色付け
 	
 	call dein#add('Shougo/vimproc.vim', {
 			\ 'build': {
@@ -75,10 +75,9 @@ if dein#load_state(s:dein_dir)
 			\     'unix': 'gmake',
 			\    },
 			\ })
-	call dein#add('Shougo/vimproc.vim')
 	call dein#add('https://github.com/vim-ruby/vim-ruby')
 	call dein#add('https://github.com/tpope/vim-rails')
-	call dein#add('https://github.com/scrooloose/nerdtree')
+	call dein#add('https://github.com/scrooloose/nerdtree')"ディレクトリツリー
 
 
 
@@ -94,21 +93,39 @@ if dein#load_state(s:dein_dir)
 
 	" 設定終了
 	call dein#end()
-call dein#save_state()
-	endif
+	call dein#save_state()
+endif
 
-	" もし、未インストールものものがあったらインストール
-	if dein#check_install()
-call dein#install()
-	endif
+" もし、未インストールものものがあったらインストール
+if dein#check_install()
+	call dein#install()
+endif
 
 
-	"autocmd FileType coq highlight SentToCoq ctermbg=17 guibg=#000080
-	" Unit.vimの設定
-	""""""""""""""""""""""""""""""
-	" 入力モードで開始する
-	let g:unite_enable_start_insert=1
-	" バッファ一覧
-	noremap <C-P> :Unite buffer<CR>
-	" ファイル一覧
-	noremap <C-N> :Unite -buffer-name=file file<CR>
+"autocmd FileType coq highlight SentToCoq ctermbg=17 guibg=#000080
+" Unit.vimの設定
+""""""""""""""""""""""""""""""
+" 入力モードで開始する
+let g:unite_enable_start_insert=1
+" バッファ一覧
+noremap <C-P> :Unite buffer<CR>
+" ファイル一覧
+noremap <C-N> :Unite -buffer-name=file file<CR>
+
+"neocomplcache
+let g:acp_enableAtStartup = 0
+" Use neocomplcache.
+let g:neocomplcache_enable_at_startup = 1
+" Use smartcase.
+let g:neocomplcache_enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplcache_min_syntax_length = 3
+let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+inoremap <expr><C-g>     neocomplcache#undo_completion()
+inoremap <expr><C-l>     neocomplcache#complete_common_string()
+
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
+"括弧の色つけの個数
+let g:rbpt_max = 16
+let g:rbpt_loadcmd_toggle = 0
