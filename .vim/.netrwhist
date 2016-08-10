@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/shi/.emacs.d'
+let g:netrw_dirhist_2='/home/shi/卒論/book'
+let g:netrw_dirhist_3='/home/shi/.emacs.d'
+let g:netrw_dirhist_4='/home/shi'
+let g:netrw_dirhist_5='/home/shi/prog/clojure/src/clj/clojure/core'
+let g:netrw_dirhist_6='/home/shi/default/資料/0707'
+let g:netrw_dirhist_7='/home/shi/default/資料/0714'
+let g:netrw_dirhist_8='/home/shi/.vim'
+let g:netrw_dirhist_9='/home/shi/.emacs.d/elpa/sly-20150917.800/slynk/backend'
