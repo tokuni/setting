@@ -16,6 +16,30 @@ setopt list_packed
 setopt list_types
 unsetopt list_beep
 setopt rec_exact
+setopt interactive_comments                                                                                                                          
+setopt magic_equal_subst
+setopt complete_in_word
+setopt always_last_prompt
+ 
+#history kanren~
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=100000
+SAVEHIST=100000
+setopt hist_ignore_dups
+setopt share_history
+setopt hist_ignore_space
+autoload history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^P" history-beginning-search-backward-end
+bindkey "^N" history-beginning-search-forward-end~
+
+setopt auto_list
+setopt auto_param_keys
+setopt list_packed
+setopt list_types
+unsetopt list_beep
+setopt rec_exact
 setopt interactive_comments
 setopt magic_equal_subst
 setopt complete_in_word
