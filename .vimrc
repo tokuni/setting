@@ -1,6 +1,6 @@
 set autoindent
 set ts=4
-set nocompatible
+set nocompatible 
 set fileformats=unix,dos,mac
 set expandtab
 set visualbell
@@ -78,6 +78,7 @@ if dein#load_state(s:dein_dir)
 	call dein#add('https://github.com/vim-ruby/vim-ruby')
 	call dein#add('https://github.com/tpope/vim-rails')
 	call dein#add('https://github.com/scrooloose/nerdtree')"ディレクトリツリー
+	call dein#add('https://github.com/kovisoft/slimv')"
 
 
 
@@ -129,3 +130,5 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 "括弧の色つけの個数
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
+
+"slimv

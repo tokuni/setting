@@ -35,3 +35,5 @@ repo = 'https://github.com/vim-ruby/vim-ruby'
 repo = 'https://github.com/tpope/vim-rails/'
 [[plugins]]
 repo = 'https://github.com/scrooloose/nerdtree/'
+[[plugins]]
+repo = 'https://github.com/kovisoft/slimv/'

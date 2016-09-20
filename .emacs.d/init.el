@@ -54,7 +54,18 @@
 ;     '((sbcl ("sbcl" "--core" "sbcl.core-with-slynk")
 ;            :init (lambda (port-file _)
 ;                   (format "(slynk:start-server %S)\n" port-file)))))
+
+(require 'ac-slime)
+(add-hook 'slime-mode-hook 'set-up-slime-ac)
+(add-hook 'slime-repl-mode-hook 'set-up-slime-ac)
+(eval-after-load "auto-complete"
+  '(add-to-list 'ac-modes 'slime-repl-mode))
+
+
+
+
 (use-package clojure-mode
+	call dein#add('Shougo/vimproc.vim')
 			 :init
 			 (add-hook 'clojure-mode-hook #'yas-minor-mode)
 			 (add-hook 'clojure-mode-hook #'subword-mode))
