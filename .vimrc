@@ -67,7 +67,8 @@ if dein#load_state(s:dein_dir)
 	call dein#add('https://github.com/vim-latex/vim-latex')
 	call dein#add('Shougo/neomru.vim')
 	call dein#add('kien/rainbow_parentheses.vim')"括弧に色付け
-	
+	call dein#add('vim-jp/cpp-vim')"括弧に色付け
+
 	call dein#add('Shougo/vimproc.vim', {
 			\ 'build': {
 			\     'mac': 'make -f make_mac.mak',
